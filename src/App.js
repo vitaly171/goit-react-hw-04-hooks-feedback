@@ -1,64 +1,66 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import styles from './App.module.css';
 
 import FeedbackMenu from './components/Feedback-menu';
 import Statistics from './components/Statistics';
 import Section from './components/Section/';
 
-class App extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+export default function App() {
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
+
+  const options = ['good', 'neutral', 'bad'];
+
+  const onLeaveFeedback = (e) => {
+    const option = e.target.value;
+    
+    switch (option) {
+      case 'good':
+        setGood(prevGood => prevGood + 1);
+        break;
+      case 'neutral':
+        setNeutral(prevNeutral => prevNeutral + 1);
+        break;
+      case 'bad':
+        setBad(prevBad => prevBad + 1);
+        break;
+      default:
+        return;
+    }
   };
-
-  onLeaveFeedback = e => {
-    const name = e.target.value;
-    this.setState(prevState => {
-      return {
-        [name]: (prevState[name] += 1),
-      };
-    });
-  };
-
-  countTotalFeedback() {
-    const { good, neutral, bad } = this.state;
-
+  const countTotalFeedback = () => {
     return good + neutral + bad;
-  }
+  };
 
-  countPositiveFeedbackPercentage() {
-    const { good } = this.state;
+  const totalFeedback = countTotalFeedback();
+  
+  const countPositiveFeedbackPercentage = () => {
 
-    const total = this.countTotalFeedback();
+    return Math.round((good / totalFeedback) * 100) || 0
+  };
 
-    return Math.round((good / total) * 100) || 0;
-  }
-  render() {
-    const total = this.countTotalFeedback();
-    const positivePercentage = this.countPositiveFeedbackPercentage();
-    const feedbackBtnsOptions = Object.keys(this.state);
+  const positiveFeedback = countPositiveFeedbackPercentage();
 
-    return (
-      <div className={styles.app}>
+return (
+    <div className={styles.app}>
         <Section title={'Please leave feedback'}>
           <div className={styles.feedbackForm}>
             <FeedbackMenu
-              feedbackBtnsOptions={feedbackBtnsOptions}
-              onLeaveFeedback={this.onLeaveFeedback}
+              feedbackBtnsOptions={options}
+              onLeaveFeedback={onLeaveFeedback}
             />
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
-              total={total}
-              positivePercentage={positivePercentage}
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={totalFeedback}
+              positivePercentage={positiveFeedback}
             />
           </div>
         </Section>
       </div>
-    );
-  }
-}
 
-export default App;
+  )
+  
+}
