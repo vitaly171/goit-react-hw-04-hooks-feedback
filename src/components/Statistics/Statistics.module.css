@@ -1,0 +1,17 @@
+.stat {
+  text-align: left;
+  width: 200px;
+}
+
+.stat__title {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.stat__item {
+  font-weight: bold;
+}
+
+.stat__item:not(:last-child) {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,14 @@
+.app {
+  text-align: center;
+}
+
+.feedbackForm {
+  padding: 25px;
+  margin-top: 30px;
+
+  display: inline-flex;
+  justify-content: space-between;
+  border-radius: 5px;
+
+  background-color: #e3faff;
+}

@@ -1,0 +1,39 @@
+.feedbackMenu {
+  margin-right: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 150px; */
+}
+
+.feedbackBtn {
+  background: #b2e4fc;
+  border-radius: 5px;
+  border: none;
+
+  font-family: Rubik;
+  font-size: 16px;
+
+  width: 100px;
+  height: 40px;
+
+  cursor: pointer;
+}
+
+.feedbackBtn:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.feedbackBtn:hover {
+  background: #55b2ff;
+  font-weight: 700;
+  font-size: large;
+  color: blue;
+  box-shadow: 4px 4px 15px 0px blue;
+}
+
+.feedbackBtn::first-letter {
+  text-transform: capitalize;
+}
