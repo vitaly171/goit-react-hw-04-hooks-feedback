@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-04-hooks-feedback/static/css/main.50e32c36.chunk.css",
+    "main.js": "/goit-react-hw-04-hooks-feedback/static/js/main.51ea47ca.chunk.js",
+    "main.js.map": "/goit-react-hw-04-hooks-feedback/static/js/main.51ea47ca.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-04-hooks-feedback/static/js/runtime-main.3518e52f.js",
+    "runtime-main.js.map": "/goit-react-hw-04-hooks-feedback/static/js/runtime-main.3518e52f.js.map",
+    "static/js/2.b0e1cc01.chunk.js": "/goit-react-hw-04-hooks-feedback/static/js/2.b0e1cc01.chunk.js",
+    "static/js/2.b0e1cc01.chunk.js.map": "/goit-react-hw-04-hooks-feedback/static/js/2.b0e1cc01.chunk.js.map",
+    "index.html": "/goit-react-hw-04-hooks-feedback/index.html",
+    "static/css/main.50e32c36.chunk.css.map": "/goit-react-hw-04-hooks-feedback/static/css/main.50e32c36.chunk.css.map",
+    "static/js/2.b0e1cc01.chunk.js.LICENSE.txt": "/goit-react-hw-04-hooks-feedback/static/js/2.b0e1cc01.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/goit-react-hw-04-hooks-feedback/static/media/gelo1.73af30e3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3518e52f.js",
+    "static/js/2.b0e1cc01.chunk.js",
+    "static/css/main.50e32c36.chunk.css",
+    "static/js/main.51ea47ca.chunk.js"
+  ]
+}
